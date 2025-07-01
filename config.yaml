@@ -1,0 +1,29 @@
+filters:
+  additional_exclusions: []
+  currency: NGN
+  exclude_blank_bank_accounts: true
+  exclude_blank_suppliers: true
+  exclude_gl_texts:
+  - Intercompany payable
+  - IOU manager
+  - IOU staff
+  - Short Term loan
+  - Trade creditors-Foreign
+  - Vendors bills of exchange
+  - Transport Creditors
+  exclude_ntc_vendor: true
+  exclude_payment_block: true
+  exclude_suppliers_with_balance: true
+  payment_method: T
+grouping:
+  aggregations:
+    Diageo/Tolaram: first
+    Document Currency Value: sum
+    Name: first
+    Payable after WHT: sum
+    WHT availability: first
+  by:
+  - Supplier
+output:
+  file_prefix: '20250603'
+  output_folder: C:/Users/Subhasini.k/Downloads/Payment_proposal_automation
